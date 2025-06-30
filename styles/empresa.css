@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #a6a6f5;
+    color: #333;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navegación principal */
+.barra-navegacion {
+    background-color: #c0bfff;
+}
+
+.contenedor-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(45deg, #5f61f3, #fdd835);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.texto-logo {
+    font-weight: bold;
+    margin-left: 8px;
+    font-size: 19.2px;
+}
+
+/* Enlaces principales de navegación, en caso de que llegaramos a necesitar mas adelante */
+.enlaces-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c0bfff;
+    padding: 16px 32px;
+    width: 30%;
+}
+
+.enlaces-navegacion a {
+    color: #000;
+    text-decoration: none;
+}
+
+.enlaces-navegacion a:hover {
+    color: #5f61f3;
+    text-shadow: 0 0 5px #5f61f3;
+    transition: color 0.3s ease;
+}
+
+/* Formulario de registro */
+.contenedor-registro {
+    padding: 40px 0;
+}
+
+.tarjeta-registro {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.encabezado-registro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.encabezado-registro h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.botones-navegacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.boton-regresar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+}
+.contenido {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    min-height: 100vh;       
+    flex-direction: column;  
+    position: relative;   
+}   
+.emp-contenedor {
+      background-color: white;
+      border-radius: 20px;
+      padding: 40px;
+      width: 80%;
+      max-width: 500px;
+      box-shadow: 0 10px 25px #0000001a;
+      text-align: center;
+        }
+.subtitulo {
+    margin-bottom: 30px;
+       color: #555;
+   }
+   .titulo{
+  font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333; 
+   }

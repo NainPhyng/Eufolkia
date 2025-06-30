@@ -1,0 +1,370 @@
+/* ==== REINICIO BÁSICO ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== ESTILO GENERAL ==== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Barra de navegación fija superior */
+.navegacion-principal {
+  background-color: #5f61f3; /* Azul principal */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Siempre encima */
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor para limitar ancho y centrar */
+.contenedor-navegacion {
+  max-width: 1200px;
+  width: 100%;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo y texto */
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #5f61f3, #fdd835);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+}
+
+.texto-logo {
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.texto-perfil {
+  font-size: 18px;
+  color: black;
+  opacity: 0.85;
+}
+
+/* Botón regresar */
+.boton-regreso {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 22px;
+}
+
+/* ==== BARRA LATERAL ==== */
+.barra-lateral, .sidebar {
+  width: 220px;
+  background-color: #273c75; /* Azul oscuro */
+  padding-top: 80px; /* Para dejar espacio al header fijo */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+}
+
+.barra-lateral ul, .sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.barra-lateral li, .sidebar li {
+  margin: 20px 0;
+}
+
+.barra-lateral a, .sidebar a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.barra-lateral a:hover,
+.barra-lateral a.activo,
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #40739e;
+  border-radius: 8px;
+}
+
+.barra-lateral i,
+.sidebar i {
+  margin-right: 10px;
+}
+
+/* ==== CONTENIDO PRINCIPAL ==== */
+main {
+  margin-left: 220px; /* Espacio para barra lateral */
+  padding: 100px 30px 30px; /* Arriba para header */
+  flex-grow: 1;
+  width: 100%;
+  background-color: #f4f6fa;
+}
+
+.section-title, .titulo-seccion {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2f3640;
+}
+
+/* Contenedor archivos y filtro */
+.contenedor-archivos, .files-container {
+  background-color: white;
+  border: 1px solid #dcdde1;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+/* Filtro y búsqueda */
+.filtro-archivos, .file-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.filtro-archivos select, .file-type-filter {
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.busqueda-pequena, .search-mini {
+  position: relative;
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.busqueda-pequena input, .search-mini input {
+  width: 100%;
+  padding: 8px 35px 8px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.busqueda-pequena i, .search-mini i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
+/* Estado vacío */
+.estado-vacio, .file-empty-state {
+  text-align: center;
+  color: #888;
+  padding: 40px 10px;
+  font-size: 18px;
+}
+
+.estado-vacio i, .file-empty-state i {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* Lista de archivos */
+.lista-archivos, .file-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Item individual de archivo */
+.item-archivo, .file-item {
+  background-color: #fff;
+  border: 1px solid #dcdde1;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.item-archivo:hover, .file-item:hover {
+  box-shadow: 0 4px 12px rgba(95,97,243,0.3);
+}
+
+.info-archivo, .file-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.info-archivo i, .file-info i {
+  font-size: 30px;
+  color: #5f61f3;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Detalles texto */
+.detalles-archivo, .file-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.detalles-archivo h4, .file-details h4 {
+  font-size: 18px;
+  color: #2f3640;
+  margin-bottom: 5px;
+}
+
+.detalles-archivo p, .file-details p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Acciones (botones editar, eliminar, etc.) */
+.acciones-archivo, .file-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.boton-editar, .edit-btn,
+.boton-eliminar, .delete-btn {
+  background-color: #5f61f3;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-editar:hover, .edit-btn:hover,
+.boton-eliminar:hover, .delete-btn:hover {
+  background-color: #484edb;
+}
+
+/* ==== FORMULARIO DE EDICIÓN ==== */
+.seccion-form-edicion, .edit-form-section {
+  background-color: white;
+  border: 1px solid #dcdde1;
+  border-radius: 12px;
+  padding: 30px 25px;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.formulario-edicion, .edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grupo-formulario, .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-formulario label, .form-group label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #2f3640;
+  font-size: 16px;
+}
+
+.grupo-formulario input[type="text"],
+.grupo-formulario textarea,
+.form-group input[type="text"],
+.form-group textarea {
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.grupo-formulario textarea,
+.form-group textarea {
+  min-height: 80px;
+}
+
+.grupo-radio, .radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.grupo-radio label, .radio-group label {
+  font-weight: normal;
+  font-size: 15px;
+  color: #444;
+  cursor: pointer;
+}
+
+.grupo-radio input[type="radio"], .radio-group input[type="radio"] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.acciones-formulario, .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.boton-cancelar, .cancel-btn,
+.boton-guardar, .save-btn {
+  background-color: #5f61f3;
+  border: none;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-cancelar:hover, .cancel-btn:hover,
+.boton-guardar:hover, .save-btn:hover {
+  background-color: #484edb;
+}

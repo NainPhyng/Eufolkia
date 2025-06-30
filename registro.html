@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Eufolkia</title>
+    <link rel="stylesheet" href="styles/registro.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+        <!-- Navegación principal -->
+        <nav class="barra-navegacion">
+                <div class="contenedor-barra">
+                <div class="contenedor-logo">
+                    <img src="img/Logo_eulfolkia.png" alt="Eufolkia Logo" class="logo" />
+                    <span class="texto-logo">EUFOLKIA</span>
+                </div>
+                
+                </div>
+        </nav>
+
+  <main class="contenedor-registro">
+            <div class="contenedor">
+            
+
+            <div class="tarjeta-registro">
+                
+
+                <!-- FORMULARIO -->
+                <form id="formulario-registro" action="alta.jsp" method="post" name="registro">
+                <div class="rejilla-formulario">
+
+                    <!-- Paso 1 -->
+                    <div class="texto-bienvenida">
+                    <h3>¡Bienvenido a Eufolkia!</h3>
+                    <p>Antes de ser parte de nuestra comunidad, necesitamos que nos cuentes algunas cosas sobre ti.</p>
+                    </div>
+
+                    <div class="grupo-formulario">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre(s)" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                    <label for="apellidos">Apellido</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellido(s)" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                    <label for="sexo">Sexo</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="" disabled selected>Sexo</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                        <option value="no_especificar">Prefiero no especificar</option>
+                    </select>
+                    </div>
+
+                    <!-- Paso 2 -->
+                    <div class="texto-bienvenida">
+                    <p>Ahora elige un nombre de usuario y contraseña.</p>
+                    </div>
+
+                    <div class="grupo-formulario">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena_hash" name="contrasena_hash" placeholder="Contraseña" required>
+                    </div>
+
+                  
+
+                    <!-- Paso 3 -->
+                    <div class="texto-bienvenida">
+                    <h3>¡Ya casi!</h3>
+                    <p>Esta información podrás editarla más adelante. No importa si no seleccionas algun instrumento</p>
+                    </div>
+
+                    <div class="grupo-formulario">
+                    <label>Instrumento(s) que practicas</label>
+                    <div class="rejilla-instrumentos">
+                        <div class="opcion-radio"><input type="checkbox" id="piano" name="instrumentos" value="piano"><label for="piano">Piano</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="guitarra" name="instrumentos" value="guitarra"><label for="guitarra">Guitarra</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="violin" name="instrumentos" value="violin"><label for="violin">Violín</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="bateria" name="instrumentos" value="bateria"><label for="bateria">Batería</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="flauta" name="instrumentos" value="flauta"><label for="flauta">Flauta</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="ukelele" name="instrumentos" value="ukelele"><label for="ukelele">Ukelele</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="bajo" name="instrumentos" value="bajo"><label for="bajo">Bajo</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="voz" name="instrumentos" value="voz"><label for="voz">Voz</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="saxofon" name="instrumentos" value="saxofon"><label for="saxofon">Saxofón</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="trompeta" name="instrumentos" value="trompeta"><label for="trompeta">Trompeta</label></div>
+                        <div class="opcion-radio"><input type="checkbox" id="otros" name="instrumentos" value="otros"><label for="otros">Otro(s)</label></div>
+                    </div>
+                    </div>
+
+                    <div class="grupo-formulario">
+                    <label for="nivel">Nivel</label>
+                    <select id="nivel" name="nivel" required>
+                        <option value="" disabled selected>Nivel</option>
+                        <option value="principiante">Principiante</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                        <option value="profesional">Profesional</option>
+                    </select>
+                    </div>
+
+                    <div class="grupo-formulario">
+                    <label for="genero">Género Favorito</label>
+                    <select id="genero_favorito" name="genero_favorito" required>
+                        <option value="" disabled selected>Géneros</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="clasica">Clásica</option>
+                        <option value="folk">Folk</option>
+                        <option value="electronica">Electrónica</option>
+                        <option value="metal">Metal</option>
+                        <option value="indie">Indie</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    </div>
+
+                </div>
+
+                <div class="botones-navegacion">
+                    <button type="submit" class="btn btn-listo">¡Listo!</button>
+                </div>
+                </form>
+                <!-- FIN FORMULARIO -->
+
+            </div>
+            </div>
+  </main>
+
+  <script src="js/registro.js"></script>
+</body>
+
+
+</html>

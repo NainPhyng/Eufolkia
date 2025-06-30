@@ -1,0 +1,190 @@
+ body {
+                margin: 0; /* Quita el margen predeterminado del navegador */
+                font-family: 'Segoe UI', sans-serif; /* Fuente principal para todo el body */
+                background-color: #5f61f3; /* Color de fondo general */
+               
+            }
+
+    
+
+       
+            /* Contenido principal */
+            .contenedor {
+                width: 90%;
+                max-width: 14000px; 
+                margin: 0 auto; /* Centrado horizontal */
+                padding: 0 32px; 
+            }
+
+            /* Sección de bienvenida */
+            .seccion-bienvenida {
+                background-color: #5f61f3; 
+                padding: 64px 0; 
+                text-align: center; 
+            }
+
+        
+
+            .contenido-bienvenida {
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                flex-direction: column; 
+               
+            }
+
+            .contenedor-inicio-sesion {
+                background-color: white;
+                padding: 32px;
+                border-radius: 16px;
+                box-shadow: 0 4px 16px #0000001a; 
+                max-width: 1000px; 
+                height: 650px;
+                width: 100%; 
+            }
+
+            .logo-grande {
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+                margin-bottom: 16px; 
+            }
+
+            .imagen-logo {
+                max-width: 100%; 
+                height: auto; /* Mantener proporción */
+            }
+
+            .contenedor-inicio-sesion h1 {
+                font-size: 50px; 
+                margin-top: 8px; 
+                color: #5f61f3; 
+            }
+
+            .contenedor-inicio-sesion p {
+                font-size: 35px; 
+                margin: 16px 0 32px 0; /* Margen arriba 16px, abajo 32px */
+                color: #444; 
+            }
+
+
+            /* Botones */
+            .botones-inicio {
+                display: flex;
+                justify-content: space-between; /* Separar botones */
+                gap: 16px; /* Espacio entre botones */
+            }
+
+           .btn {
+            display: inline-block;
+            padding: 50px 40px; /* Más espacio interno */
+            border-radius: 80px; /* Más redondeado */
+            font-size: 35px; /* Tamaño de letra más grande */
+        
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+            .btn-primario {
+                background: #fcce38 ; 
+                color: #000; 
+            }
+
+            .btn-primario:hover {
+                transform: scale(1.05); /* Escala al pasar mouse */
+                opacity: 0.95; /* Ligera transparencia */
+            }
+
+            .btn-secundario {
+                background-color: #e0e0e0;
+                color: #333; 
+            }
+
+            .btn-secundario:hover {
+                background-color: #d5d5d5; 
+                transform: scale(1.05); 
+            }
+
+
+
+
+
+
+
+        /*adaptacion de contendio para el tamaño de la pantalla */
+    @media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 16px;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #5f61f3;
+    }
+
+    
+    .acerca-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    .acerca-texto {
+        text-align: left;
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    
+    .acerca-carrusel {
+        width: 45%;
+    }
+
+    
+    .rejilla-caracteristicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .footer-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-logo {
+        margin-bottom: 0;
+    }
+
+    .footer-links {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .rejilla-caracteristicas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar - Eufolkia</title>
+    <link rel="stylesheet" href="styles/editar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+     <!-- Encabezado de navegación -->
+    <header class="encabezado">
+        <nav class="navegacion-principal">
+            <div class="contenedor-navegacion">
+                <div class="contenedor">
+                    <a href="Mis_cosas.html" class="boton-regreso" id="enlace-regresar">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="logo-contenedor">
+                    <img src="img/Logo_eulfolkia.png" alt="Logo Eufolkia" class="logo">
+                    <span class="texto-logo">EUFOLKIA</span>
+                    <span class="texto-perfil">Mis cosas</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+        <ul>
+            
+            <li><a href="Mis_cosas.html"><i class="fas fa-plus"></i> Añadir</a></li>
+            <li><a href="buscar.html"><i class="fas fa-search"></i> Buscar</a></li>
+            <!--<li><a href="consultar.html"><i class="fas fa-question-circle"></i> Consultar</a></li>-->
+            <li><a href="eliminar.html"><i class="fas fa-trash"></i> Eliminar</a></li>
+            <li><a href="editar.html" class="active"><i class="fas fa-edit"></i> Editar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="edit-section">
+            <h2 class="section-title">Editar archivos</h2>
+            
+            <div class="files-container">
+                <div class="file-filter">
+                    <select class="file-type-filter">
+                        <option value="all">Todos los archivos</option>
+                        <option value="audio">Audio</option>
+                        <option value="video">Video</option>
+                        <option value="document">Documentos</option>
+                    </select>
+                    <div class="search-mini">
+                        <input type="text" placeholder="Buscar archivo">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+                <div class="file-empty-state">
+                    <i class="fas fa-folder-open"></i>
+                    <p>No tienes archivos para editar</p>
+                </div>
+                
+                <div class="file-list" style="display: none;">
+                    <div class="file-item">
+                        <div class="file-info">
+                            <i class="fas fa-music"></i>
+                            <div class="file-details">
+                                <h4>Nombre de canción</h4>
+                                <p>Audio • 5.2 MB • Subido el 10/04/2023</p>
+                            </div>
+                        </div>
+                        <div class="file-actions">
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="file-item">
+                        <div class="file-info">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="file-details">
+                                <h4>Partitura</h4>
+                                <p>Documento • 1.8 MB • Subido el 22/03/2023</p>
+                            </div>
+                        </div>
+                        <div class="file-actions">
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de formulario de edición (inicialmente oculta) -->
+        <section class="edit-form-section" style="display: none;">
+            <h2 class="section-title">Editar archivo</h2>
+            
+            <form class="edit-form">
+                <div class="form-group">
+                    <label for="edit-title">Título</label>
+                    <input type="text" id="edit-title" name="edit-title" value="Nombre de canción">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-description">Descripción</label>
+                    <textarea id="edit-description" name="edit-description" rows="3">Descripción actual del archivo...</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Categoría</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="edit-category" value="music" checked> Música
+                        </label>
+                        <label>
+                            <input type="radio" name="edit-category" value="sheet"> Partitura
+                        </label>
+                        <label>
+                            <input type="radio" name="edit-category" value="tutorial"> Tutorial
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-tags">Etiquetas (separadas por comas)</label>
+                    <input type="text" id="edit-tags" name="edit-tags" value="música, folk, tradicional">
+                </div>
+                
+                <div class="form-group">
+                    <label>Visibilidad</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="edit-visibility" value="public" checked> Público
+                        </label>
+                        <label>
+                            <input type="radio" name="edit-visibility" value="private"> Privado
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancelar</button>
+                    <button type="submit" class="save-btn">Guardar cambios</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

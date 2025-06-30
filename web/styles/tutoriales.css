@@ -1,0 +1,204 @@
+body {
+                margin: 0; /* Quita el margen predeterminado del navegador */
+                font-family: 'Segoe UI', sans-serif; /* Fuente principal para todo el body */
+                background-color: #5f61f3; /* Color de fondo general */
+            }
+
+            /* Navegación principal */
+            .navegacion-principal {
+                background-color: #c0bfff; 
+            }
+
+            .contenedor-navegacion {
+                display: flex; /* distribuir elementos horizontalmente */
+                justify-content: space-between; /* Espacio entre elementos hijos */
+                align-items: center; /* Centrar verticalmente */
+                padding: 16px 32px; /* 16px arriba/abajo, 32px izquierda/derecha */
+                max-width: 100%x; /* Máximo ancho  */
+                margin: 0 auto; /* Centrar horizontalmente */
+                
+            }
+
+            .logo-contenedor {
+                display: flex; 
+                align-items: center; 
+                gap: 40px;
+            }
+
+            .logo {
+                height: 40px; 
+                background: linear-gradient(45deg, #5f61f3, #fdd835); /* Degradado */
+                border-radius: 50%; /* Forma circular */
+                width: 40px;
+                display: flex; 
+                align-items: center;
+                justify-content: center; 
+                color: white; 
+                font-weight: bold; /* Texto en negrita */
+            }
+
+            .texto-logo {
+                font-weight: bold; 
+                margin-left: 8px; 
+                font-size: 19.2px; 
+                
+            }
+
+            .barra-busqueda {
+                display: flex; 
+                align-items: center; 
+                position: relative; 
+            }
+
+            .barra-busqueda input[type="text"] {
+                padding: 12px 16px; /* Espacio interno */
+                border-radius: 32px; /* Bordes redondeados  */
+                border: 2px solid #fff; /* Borde blanco */
+                width: 70%; /* Ancho del input */
+                font-size: 16px; 
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra ligera */
+                transition: all 0.3s ease; /* Transición suave */
+            }
+
+            .barra-busqueda input[type="text"]:focus {
+                outline: none; /* Quita borde azul por defecto */
+                border-color: #5f61f3; /* Borde morado */
+                box-shadow: 0 4px 16px #5f61f34d; /* Sombra morada al enfocar */
+            }
+
+            .boton-busqueda {
+                background: linear-gradient(45deg, #5f61f3, #4a4ccc); /* Degradado azul */
+                color: white; 
+                border: none; 
+                padding: 12px 24px;
+                border-radius: 32px; 
+                margin-left: 8px; 
+                cursor: pointer; /* Cursor tipo mano */
+                transition: all 0.3s ease; 
+                font-weight: 600; /* Fuente semi-negrita */
+                box-shadow: 0 2px 8px #5f61f34d; 
+            }
+
+            .boton-busqueda:hover {
+                transform: scale(1.05); /* lo agranda un poco al enfocar */
+                box-shadow: 0 4px 12px #5f61f380; 
+                opacity: 0.95; /* ligera transparencia */
+            }
+
+
+
+            /* Sección perfil */
+            .seccion-perfil {
+                display: flex; /* Para alinear imagen y enlaces horizontalmente */
+                align-items: center; /* Centrar verticalmente */
+                
+            }
+
+            .contenedor-imagen-perfil {
+                width: 50px; 
+                height: 50px; 
+                background: linear-gradient(45deg, #aab9ff, #c0bfff);
+                border-radius: 50%;
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                margin-right: 15px; 
+            }
+
+            .fotoperfilprueba {
+                width: 100%; /* Ocupa todo el contenedor */
+                height: 100%; /* Ocupa todo el contenedor */
+                border-radius: 50%; /* Imagen redondeada */
+                object-fit: cover; /* Ajusta la imagen para cubrir el área */
+            }
+
+            .icono-perfil {
+                width: 24px; 
+                height: 24px; 
+                color: white; /* Color del ícono */
+            }
+
+            .enlaces-perfil {
+                display: flex; /* Contenedor flexible */
+                flex-direction: column; /* Apila enlaces verticalmente */
+            }
+
+            .enlaces-perfil a {
+                color: #000; 
+                text-decoration: none; /* Sin subrayado */
+                margin-bottom: 5px; 
+                position: relative; 
+                padding: 4px 0; 
+            }
+
+
+
+            /* Enlaces principales de navegación */
+            .enlaces-navegacion {
+               
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center; 
+                background-color: #c0bfff; 
+                padding: 16px 32px;
+                width: 45%; 
+                
+             
+            }
+            .menu-principal-enlaces{
+                gap: 20px;
+                display: flex;
+            }
+.boton-regreso {
+            position: absolute;
+            top: 150px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: #c0bfff;
+           
+        }
+            .enlaces-navegacion a {
+                color: #000; 
+                text-decoration: none;
+                gap: 10px;
+                display: flex; 
+            }
+
+            .enlaces-navegacion a:hover, .enlaces-perfil a:hover {
+                color: #5f61f3; /* Color morado al pasar mouse */
+                text-shadow: 0 0 5px #5f61f3; /* Sombra del texto */
+                transition: color 0.3s ease; /* Transición suave */
+            }
+
+
+            /* Contenido principal */
+            .contenedor {
+                width: 90%;
+                max-width: 1200px; 
+                margin: 0 auto; /* Centrado horizontal */
+                padding: 0 32px; 
+            }
+
+
+            .opcion-tutorial {
+                background-color: #5f61f3; 
+                padding: 64px 0; 
+                text-align: center; 
+            }
+
+            .selecciona-opcion img{
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                border-radius: 12px; /* Bordes redondeados */
+                box-shadow: 0 4px 12px #0000001a; /* Sombra suave */
+                object-fit: cover; /* Ajuste del contenido */
+                display: block;
+                margin: 0 auto; /* Centrado horizontal */
+                }   

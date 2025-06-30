@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acordes Ukelele</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <link rel="stylesheet" href="styles/tutouke.css" />
+</head>
+<body>
+  <div class="login-contenedor">
+    <div class="logo">UKELELE</div>
+    <p class="subtitulo"> PRESIONALOS PARA CONOCER SU SONIDO </p>
+
+
+    <div class="boton-regreso">
+                    <a href="tutoriales.html">
+                        <i class="fas fa-arrow-left" ></i>
+                    </a>
+                </div>
+    <div class="contenedor-acordes">
+      <!-- Mayores -->
+      <div class="acorde" data-audio="c"><img src="img/C (ukulele).jpg" alt="C"><audio id="audio-c" src="audios/C (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="d"><img src="img/D (ukulele).jpg" alt="D"><audio id="audio-d" src="audios/D (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="e"><img src="img/E (ukulele).jpg" alt="E"><audio id="audio-e" src="audios/E (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="f"><img src="img/F (ukulele).jpg" alt="F"><audio id="audio-f" src="audios/F (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="g"><img src="img/G (ukulele).jpg" alt="G"><audio id="audio-g" src="audios/G (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="a"><img src="img/A (ukulele).jpg" alt="A"><audio id="audio-a" src="audios/A (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="b"><img src="img/B (ukulele).jpg" alt="B"><audio id="audio-b" src="audios/B (ukulele).mp3"></audio></div>
+
+      <!-- Menores -->
+      <div class="acorde" data-audio="am"><img src="img/Am (ukulele).jpg" alt="Am"><audio id="audio-am" src="audios/Am (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="bm"><img src="img/Bm (ukulele).jpg" alt="Bm"><audio id="audio-bm" src="audios/Bm (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="cm"><img src="img/Cm (ukulele).jpg" alt="Cm"><audio id="audio-cm" src="audios/Cm (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="dm"><img src="img/Dm (ukulele).jpg" alt="Dm"><audio id="audio-dm" src="audios/Dm (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="em"><img src="img/Em (ukulele).jpg" alt="Em"><audio id="audio-em" src="audios/Em (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="fm"><img src="img/Fm (ukulele).jpg" alt="Fm"><audio id="audio-fm" src="audios/Fm (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="gm"><img src="img/Gm (ukulele).jpg" alt="Gm"><audio id="audio-gm" src="audios/Gm (ukulele).mp3"></audio></div>
+
+      <!-- Séptimos -->
+      <div class="acorde" data-audio="a7"><img src="img/A7 (ukulele).jpg" alt="A7"><audio id="audio-a7" src="audios/A7 (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="b7"><img src="img/B7 (ukulele).jpg" alt="B7"><audio id="audio-b7" src="audios/B7 (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="c7"><img src="img/C7 (ukulele).jpg" alt="C7"><audio id="audio-c7" src="audios/C7 (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="d7"><img src="img/D7 (ukulele).jpg" alt="D7"><audio id="audio-d7" src="audios/D7 (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="e7"><img src="img/E7 (ukulele).jpg" alt="E7"><audio id="audio-e7" src="audios/E7 (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="f7"><img src="img/F7 (ukulele).jpg" alt="F7"><audio id="audio-f7" src="audios/F7 (ukulele).mp3"></audio></div>
+      <div class="acorde" data-audio="g7"><img src="img/G7 (ukulele).jpg" alt="G7"><audio id="audio-g7" src="audios/G7 (ukulele).mp3"></audio></div>
+    </div>
+  </div>
+
+  <script>
+        const acordes = document.querySelectorAll('.acorde');
+
+        acordes.forEach(acorde => {
+            const nombre = acorde.dataset.audio;
+            const audio = document.getElementById(`audio-${nombre}`);
+            
+            acorde.addEventListener('click', () => {
+            audio.volume = 1.0; // Volumen máximo
+
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar - Eufolkia</title>
+     
+    
+   
+     <link rel="stylesheet" href="styles/buscar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+
+    <!-- Barra de navegación superior -->
+    <header class="encabezado">
+            <!-- Encabezado del inicio, navegación -->
+        <nav class="navegacion-principal">
+                <div class="contenedor-navegacion">
+                        <div class="contenedor">
+                        <a href="Mis_cosas.html" class="boton-regresar" id="enlace-regresar">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        </div>
+
+                        <div class="logo-contenedor">
+                            <img src="img/Logo_eulfolkia.png" alt="Eufolkia Logo" class="logo">
+                           <span class="texto-logo">EUFOLKIA</span>
+                            <span class="texto-perfil">Buscar Archivo</span>
+                        </div>
+                        
+                    </div>
+
+           
+        </nav>
+    </header>
+
+    <!-- Menú lateral -->
+    <nav class="barra-lateral">
+        <ul>
+           
+            <li><a href="Mis_cosas.html"><i class="fas fa-plus"></i> Añadir</a></li>
+            <li><a href="buscar.html" class="activo"><i class="fas fa-search"></i> Buscar</a></li>
+            <!--<li><a href="consultar.html"><i class="fas fa-question-circle"></i> Consultar</a></li>-->
+            <li><a href="eliminar.html"><i class="fas fa-trash"></i> Eliminar</a></li>
+            <li><a href="editar.html"><i class="fas fa-edit"></i> Editar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="seccion-busqueda">
+            <h2 class="titulo-seccion">Buscar archivos</h2>
+            
+            <!-- Barra de búsqueda -->
+            <div class="contenedor-busqueda">
+                <div class="barra-busqueda">
+                    <input type="text" placeholder="Buscar por título, autor o categoría">
+                    <button class="boton-buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <!-- Filtros -->
+                <div class="opciones-filtro">
+                    <h3>Filtrar por:</h3>
+                    <div class="grupo-filtros">
+                        <label><input type="checkbox" name="tipo-filtro" value="audio"> Audio</label>
+                        <label><input type="checkbox" name="tipo-filtro" value="video"> Video</label>
+                        <label><input type="checkbox" name="tipo-filtro" value="documento"> Documentos</label>
+                    </div>
+                    
+                    <h3>Ordenar por:</h3>
+                    <select class="selector-orden">
+                        <option value="fecha-reciente">Más recientes</option>
+                        <option value="fecha-antigua">Más antiguos</option>
+                        <option value="nombre-az">Nombre (A-Z)</option>
+                        <option value="nombre-za">Nombre (Z-A)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Resultados -->
+            <div class="resultados-busqueda">
+                <h3>Resultados de búsqueda</h3>
+
+                <!-- Si aún no hay resultados -->
+                <div class="resultados-vacios">
+                    <i class="fas fa-search"></i>
+                    <p>Realiza una búsqueda para ver resultados</p>
+                </div>
+
+                <!-- Aquí aparecerán los resultados dinámicamente -->
+                <div class="contenedor-resultados" style="display: none;">
+                    <!-- Resultados dinámicos van aquí -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

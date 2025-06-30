@@ -1,0 +1,199 @@
+/* ==== REINICIO GENERAL DE ESTILOS ==== */
+* {
+  box-sizing: border-box;  /* Asegura que padding y border no afecten el tamaño total */
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== ESTILOS GENERALES DEL BODY ==== */
+body {
+  font-family: Arial, sans-serif; /* Tipografía sencilla y legible */
+  background-color: #f4f6fa;      /* Fondo claro y suave */
+  display: flex;                  /* Permite organizar en columnas */
+  min-height: 100vh;              /* Al menos el alto de la pantalla */
+}
+
+/* ==== BARRA DE NAVEGACIÓN SUPERIOR ==== */
+.navegacion-principal {
+  background-color: #5f61f3;      /* Color azul principal */
+  width: 100%;
+  position: fixed;                /* Se queda fija arriba */
+  top: 0;
+  left: 0;
+  z-index: 1000;                  /* Se muestra por encima de todo */
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor que limita el ancho y centra el contenido */
+.contenedor-navegacion {
+  max-width: 1200px;
+  width: 100%;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Contenedor del logo + nombre */
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Círculo con degradado (ícono del logo) */
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #5f61f3, #fdd835); /* Azul a amarillo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+}
+
+/* Texto al lado del logo */
+.texto-logo {
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+/* Texto del perfil (esquina derecha) */
+.texto-perfil {
+  font-size: 18px;
+  color: black;
+  opacity: 0.85; /* Ligera transparencia */
+}
+
+
+.boton-regreso {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;             /* Botón redondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.boton-regreso a {
+  font-size: 28px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* ==== PERFIL DE USUARIO A LA DERECHA ==== */
+.user-profile {
+  position: relative;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.profile-link i {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+/* ==== MENÚ LATERAL IZQUIERDO ==== */
+.sidebar {
+  width: 220px;
+  background-color: #273c75; /* Azul oscuro */
+  padding-top: 100px;        /* Deja espacio para la barra superior */
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+}
+
+/* Enlaces dentro del menú lateral */
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  transition: background 0.3s; /* Suaviza el hover */
+}
+
+/* Enlace activo o cuando pasas el mouse */
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #40739e;
+  border-radius: 8px;
+}
+
+.sidebar i {
+  margin-right: 10px;
+}
+
+/* ==== ÁREA PRINCIPAL DE CONTENIDO ==== */
+main {
+  margin-left: 220px;         /* Deja espacio para el menú lateral */
+  padding: 120px 20px 20px;   /* Deja espacio arriba por la barra de navegación */
+  flex-grow: 1;               /* Ocupa todo el espacio restante */
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #2f3640;
+}
+
+/* ==== TABLA DE OPCIONES DE ARCHIVOS ==== */
+.files-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.file-option {
+  padding: 15px;
+}
+
+/* Botones con ícono y texto */
+.file-button {
+  background-color: white;
+  border: 1px solid #dcdde1;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  font-size: 18px;
+  color: #2f3640;
+}
+
+/* Íconos dentro de los botones */
+.file-button i {
+  display: block;
+  margin-top: 8px;
+  font-size: 24px;
+  color: #4a69bd;
+}
+
+/* Efecto al pasar el mouse por los botones */
+.file-button:hover {
+  background-color: #f1f2f6;
+  transform: scale(1.02); /* Pequeño efecto de agrandado */
+}

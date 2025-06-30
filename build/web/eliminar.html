@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar - Eufolkia</title>
+    <link rel="stylesheet" href="styles/eliminar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <!-- Encabezado de navegación -->
+    <header class="encabezado">
+        <nav class="navegacion-principal">
+            <div class="contenedor-navegacion">
+                <div class="contenedor">
+                    <a href="Mis cosas.html" class="boton-regreso" id="enlace-regresar">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="logo-contenedor">
+                    <img src="img/Logo_eulfolkia.png" alt="Logo Eufolkia" class="logo">
+                    <span class="texto-logo">EUFOLKIA</span>
+                    <span class="texto-perfil">Mis cosas</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menú lateral -->
+    <nav class="barra-lateral">
+        <ul>
+            <li><a href="Mis_cosas.html"><i class="fas fa-plus"></i> Añadir</a></li>
+            <li><a href="buscar.html"><i class="fas fa-search"></i> Buscar</a></li>
+            <li><a href="eliminar.html" class="activo"><i class="fas fa-trash"></i> Eliminar</a></li>
+            <li><a href="editar.html"><i class="fas fa-edit"></i> Editar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="seccion-eliminar">
+            <h2 class="titulo-seccion">Eliminar archivos</h2>
+
+            <div class="advertencia-eliminar">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>¡Atención! La eliminación de archivos es permanente y no se puede deshacer.</p>
+            </div>
+
+            <div class="contenedor-archivos">
+                <div class="filtro-archivos">
+                    <select class="selector-tipo-archivo">
+                        <option value="todos">Todos los archivos</option>
+                        <option value="audio">Audio</option>
+                        <option value="video">Video</option>
+                        <option value="documento">Documentos</option>
+                    </select>
+                    <div class="busqueda-mini">
+                        <input type="text" placeholder="Buscar archivo">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="estado-vacio">
+                    <i class="fas fa-folder-open"></i>
+                    <p>No tienes archivos para eliminar</p>
+                </div>
+
+                <div class="lista-archivos" style="display: none;">
+                    <div class="archivo-item">
+                        <div class="info-archivo">
+                            <i class="fas fa-music"></i>
+                            <div class="detalles-archivo">
+                                <h4>Nombre de canción</h4>
+                                <p>Audio • 5.2 MB • Subido el 10/04/2023</p>
+                            </div>
+                        </div>
+                        <div class="acciones-archivo">
+                            <button class="boton-eliminar">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="archivo-item">
+                        <div class="info-archivo">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="detalles-archivo">
+                                <h4>Partitura</h4>
+                                <p>Documento • 1.8 MB • Subido el 22/03/2023</p>
+                            </div>
+                        </div>
+                        <div class="acciones-archivo">
+                            <button class="boton-eliminar">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controles-eliminar">
+                <button class="boton-seleccionar-todos">Seleccionar todos</button>
+                <button class="boton-eliminar-seleccionados">Eliminar seleccionados</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de confirmación -->
+    <div class="modal" id="modal-confirmar-eliminacion" style="display: none;">
+        <div class="contenido-modal">
+            <h3>Confirmar eliminación</h3>
+            <p>¿Estás seguro de que deseas eliminar los archivos seleccionados? Esta acción no se puede deshacer.</p>
+            <div class="botones-modal">
+                <button class="boton-cancelar">Cancelar</button>
+                <button class="boton-confirmar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* ==== REINICIO BÁSICO ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== ESTILO GENERAL ==== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
+  display: flex;
+  min-height: 100vh;
+}
+
+.navegacion-principal {
+  background-color: #5f61f3;      /* Color azul principal */
+  width: 100%;
+  position: fixed;                /* Se queda fija arriba */
+  top: 0;
+  left: 0;
+  z-index: 1000;                  /* Se muestra por encima de todo */
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor que limita el ancho y centra el contenido */
+.contenedor-navegacion {
+  max-width: 1200px;
+  width: 100%;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Contenedor del logo + nombre */
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Círculo con degradado (ícono del logo) */
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #5f61f3, #fdd835); /* Azul a amarillo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+}
+
+/* Texto al lado del logo */
+.texto-logo {
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+/* Texto del perfil (esquina derecha) */
+.texto-perfil {
+  font-size: 18px;
+  color: black;
+  opacity: 0.85; /* Ligera transparencia */
+}
+
+
+.boton-regreso {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;             /* Botón redondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.titulo-pagina {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.perfil-usuario {
+  display: flex;
+  align-items: center;
+}
+
+.enlace-perfil {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.enlace-perfil i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+/* ==== MENÚ LATERAL ==== */
+.barra-lateral {
+  width: 220px;
+  background-color: #273c75;
+  padding-top: 80px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+}
+
+.barra-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.barra-lateral li {
+  margin: 20px 0;
+}
+
+.barra-lateral a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  
+}
+
+.barra-lateral a:hover,
+.barra-lateral a.activo {
+  background-color: #40739e;
+  border-radius: 8px;
+}
+
+.barra-lateral i {
+  margin-right: 10px;
+}
+
+/* ==== CONTENIDO PRINCIPAL ==== */
+main {
+  margin-left: 220px;
+  padding: 100px 30px 30px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.titulo-seccion {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2f3640;
+}
+
+/* ==== BUSCADOR ==== */
+.contenedor-busqueda {
+  background-color: white;
+  border: 1px solid #dcdde1;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.barra-busqueda {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.barra-busqueda input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+}
+
+.boton-buscar {
+  background-color: #5f61f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ==== FILTROS ==== */
+.opciones-filtro h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.grupo-filtros label {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 15px;
+  color: #2f3640;
+}
+
+.selector-orden {
+  margin-top: 10px;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* ==== RESULTADOS ==== */
+.resultados-busqueda h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2f3640;
+}
+
+.resultados-vacios {
+  text-align: center;
+  color: #888;
+  padding: 40px 10px;
+}
+
+.resultados-vacios i {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.contenedor-resultados {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

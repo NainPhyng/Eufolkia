@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="styles/tutoguitarra.css">
+    <title>Document</title>
+    
+</head>
+<body>
+  <div class="login-contenedor">
+    <div class="logo">GUITARRA</div>
+    <p class="subtitulo"> PRESIONALOS PARA CONOCER SU SONIDO</p>
+
+
+    <div class="boton-regreso">
+                    <a href="tutoriales.html">
+                        <i class="fas fa-arrow-left" ></i>
+                    </a>
+                </div>
+    <div class="contenedor-acordes">
+      
+      
+      <div class="acorde" data-audio="em"><img src="img/em_gui.png" alt="em_gui"><audio id="audio-em" src="audios/Em.m4a"></audio></div>
+      <div class="acorde" data-audio="e"><img src="img/e_gui.png" alt="e_gui"><audio id="audio-e" src="audios/E.m4a"></audio></div>
+      <div class="acorde" data-audio="am"><img src="img/am_gui.png" alt="am_gui"><audio id="audio-am" src="audios/Am.m4a"></audio></div>
+      <div class="acorde" data-audio="c"><img src="img/c_gui.png" alt="c_gui"><audio id="audio-c" src="audios/C.m4a"></audio></div>
+      <div class="acorde" data-audio="a"><img src="img/a_gui.png" alt="a_gui"><audio id="audio-a" src="audios/A.m4a"></audio></div>
+      <div class="acorde" data-audio="g"><img src="img/g_gui.png" alt="g_gui"><audio id="audio-g" src="audios/G.m4a"></audio></div>
+      <div class="acorde" data-audio="d"><img src="img/d_gui.png" alt="d_gui"><audio id="audio-d" src="audios/D.m4a"></audio></div>
+      <div class="acorde" data-audio="dm"><img src="img/dm_gui.png" alt="dm_gui"><audio id="audio-dm" src="audios/Dm.m4a"></audio></div>
+      <div class="acorde" data-audio="e7"><img src="img/e7_gui.png" alt="e7_gui"><audio id="audio-e7" src="audios/E7.m4a"></audio></div>
+      <div class="acorde" data-audio="d7"><img src="img/d7_gui.png" alt="d7_gui"><audio id="audio-d7" src="audios/D7.m4a"></audio></div>
+      <div class="acorde" data-audio="a7"><img src="img/a7_gui.png" alt="a7_gui"><audio id="audio-a7" src="audios/A7.m4a"></audio></div>
+      <div class="acorde" data-audio="c7"><img src="img/c7_gui.png" alt="c7_gui"><audio id="audio-c7" src="audios/C7.m4a"></audio></div>
+      
+    </div>
+  </div>
+
+  <script>
+        const acordes = document.querySelectorAll('.acorde');
+
+        acordes.forEach(acorde => {
+            const nombre = acorde.dataset.audio;
+            const audio = document.getElementById(`audio-${nombre}`);
+            
+            acorde.addEventListener('click', () => {
+            audio.volume = 1.0; // Volumen máximo
+
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+            });
+        });
+</script>
+
+</body>
+</html>

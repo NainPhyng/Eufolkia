@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eulfolkia - Plataforma Musical Profesional</title>
+    <link rel="stylesheet" href="styles/buscar_musica.css">
+</head>
+<body>
+    <nav class="navegacion-principal">
+        <div class="contenedor-navegacion">
+            <div class="logo-contenedor">
+                <img src="img/Logo_eulfolkia.png" alt="Eufolkia Logo" class="logo">
+                <span class="texto-logo">EUFOLKIA</span>
+            </div>
+           
+            <!--- posible barra, implementacion futura
+            <div class="barra-busqueda">
+                <input type="text" placeholder="¿Qué quieres buscar?" aria-label="Buscar contenido">
+                <button class="boton-busqueda" onclick="window.location.href='buscar_musica.html'">Explorar</button>
+            </div>
+        -->
+            
+            <div class="enlaces-navegacion">
+                <div class="menu-principal-enlaces">
+                    <a href="inicio.html">Inicio</a>
+                    <a href="empresa.html">Sobre nosotros</a>
+                </div>
+
+                <div class="seccion-perfil">
+                    <div class="contenedor-imagen-perfil">
+                        <img src="img/fotoperfilprueba.png" alt="Perfil de usuario" class="fotoperfilprueba">
+                    </div>
+                    <div class="enlaces-perfil">
+                        <a href="perfil.html">Mi Perfil</a>
+                        <a href="Mis_cosas.html">Mis Cosas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contenedor-principal">
+        <section class="seccion-principal">
+            <h1 class="titulo-principal">Eulfolkia</h1>
+            <p class="titulo-secundario">La plataforma musical donde artistas y oyentes se conectan. Descubre, comparte y disfruta. </p>
+        </section>
+
+        <section class="contenedor-estadisticas">
+            <div class="tarjeta-estadistica">
+                <div class="numero-estadistica" id="totalCanciones"></div>
+                <div class="label-estadistica">Canciones</div>
+            </div>
+            <div class="tarjeta-estadistica">
+                <div class="numero-estadistica" id="totalArtistas"></div>
+                <div class="label-estadistica">Artistas</div>
+            </div>
+            <div class="tarjeta-estadistica">
+                <div class="numero-estadistica" id="totalGeneros"></div>
+                <div class="label-estadistica">Géneros</div>
+            </div>
+            <div class="tarjeta-estadistica">
+                <div class="numero-estadistica" id="totalDescargas"></div>
+                <div class="label-estadistica">Descargas</div>
+            </div>
+        </section>
+
+        <section class="contenedor-biblioteca">
+            <div class="encabezado-biblioteca">
+                <h2 class="titulo-biblioteca">Biblioteca Musical</h2>
+                <div class="contador-canciones" id="contadorCanciones">0 canciones</div>
+            </div>
+            <div id="listaCanciones">
+                <div class="estado-carga">Cargando biblioteca musical...</div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- REPRODUCTOR FLOTANTE MEJORADO
+    <div class="reproductor-flotante" id="reproductorFlotante">
+        <div class="barra-progreso">
+            <div class="progreso-actual" id="barraProgreso"></div>
+        </div>
+        
+        <div class="contenido-reproductor">
+         Información de la canción actual 
+            <div class="informacion-cancion">
+                <div class="miniatura-cancion" id="miniaturaCancionActual">♪</div>
+                <div class="detalles-cancion">
+                    <div class="titulo-cancion-actual" id="tituloCancionActual">
+                        <span class="indicador-estado" id="indicadorEstado" style="display: none;"></span>
+                        Ninguna canción seleccionada
+                    </div>
+                    <div class="artista-cancion-actual" id="artistaCancionActual">Selecciona una canción para comenzar</div>
+                </div>
+            </div>
+-->
+            <!-- Controles centrales de reproducción -->
+            <div class="controles-centrales">
+                <button class="boton-control-principal" onclick="cancionAnterior()" title="Canción anterior" id="botonAnterior">
+                    
+                </button>
+                <button class="boton-control-principal boton-reproducir-principal" onclick="alternarReproduccion()" title="Reproducir/Pausar" id="botonReproducir">
+                    
+                </button>
+                <button class="boton-control-principal" onclick="cancionSiguiente()" title="Siguiente canción" id="botonSiguiente">
+                    
+                </button>
+            </div>
+
+            <!-- Controles adicionales -->
+            <div class="controles-adicionales">
+                <button class="boton-accion" onclick="alternarRepeticion()" title="Repetir" id="botonRepetir">
+                    
+                </button>
+                <button class="boton-accion" onclick="alternarAleatorio()" title="Reproducción aleatoria" id="botonAleatorio">
+                    
+                </button>
+                <button class="boton-accion" onclick="alternarSilencio()" title="Silenciar" id="botonSilencio">
+                
+                </button>
+                <button class="boton-accion" onclick="detenerReproduccion()" title="Detener reproducción" id="botonDetener">
+                    
+                </button>
+            </div>
+        
+    <script src="js/buscar_musica.js"></script>
+       

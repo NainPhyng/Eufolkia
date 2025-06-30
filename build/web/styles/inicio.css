@@ -1,0 +1,572 @@
+ body {
+                margin: 0; /* Quita el margen predeterminado del navegador */
+                font-family: 'Segoe UI', sans-serif; /* Fuente principal para todo el body */
+                background-color: #c0bfff; /* Color de fondo general */
+               
+            }
+
+            /* Navegación principal */
+            .navegacion-principal {
+                background-color: #c0bfff; 
+            }
+
+            .contenedor-navegacion {
+                display: flex; /* distribuir elementos horizontalmente */
+                justify-content: space-between; /* Espacio entre elementos hijos */
+                align-items: center; /* Centrar verticalmente */
+                padding: 16px 32px; /* 16px arriba/abajo, 32px izquierda/derecha */
+                max-width: 100%; /* Máximo ancho  */
+                margin: 0 auto; /* Centrar horizontalmente */
+                
+            }
+
+            .logo-contenedor {
+                display: flex; 
+                align-items: center; 
+            }
+
+            .logo {
+                height: 40px; 
+                background: linear-gradient(45deg, #5f61f3, #fdd835); /* Degradado */
+                border-radius: 50%; /* Forma circular */
+                width: 40px;
+                display: flex; 
+                align-items: center;
+                justify-content: center; 
+                color: white; 
+                font-weight: bold; /* Texto en negrita */
+            }
+
+            .texto-logo {
+                font-weight: bold; 
+                margin-left: 8px; 
+                font-size: 19.2px; 
+            }
+
+            .barra-busqueda {
+                display: flex; 
+                align-items: center; 
+                position: relative; 
+            }
+
+            .barra-busqueda input[type="text"] {
+                padding: 12px 16px; /* Espacio interno */
+                border-radius: 32px; /* Bordes redondeados  */
+                border: 2px solid #fff; /* Borde blanco */
+                width: 70%; /* Ancho del input */
+                font-size: 16px; 
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra ligera */
+                transition: all 0.3s ease; /* Transición suave */
+            }
+
+            .barra-busqueda input[type="text"]:focus {
+                outline: none; /* Quita borde azul por defecto */
+                border-color: #5f61f3; /* Borde morado */
+                box-shadow: 0 4px 16px #5f61f34d; /* Sombra morada al enfocar */
+            }
+
+            .boton-busqueda {
+                background: linear-gradient(45deg, #5f61f3, #4a4ccc); /* Degradado azul */
+                color: white; 
+                border: none; 
+                padding: 12px 24px;
+                border-radius: 32px; 
+                margin-left: 8px; 
+                cursor: pointer; /* Cursor tipo mano */
+                transition: all 0.3s ease; 
+                font-weight: 600; /* Fuente semi-negrita */
+                box-shadow: 0 2px 8px #5f61f34d; 
+            }
+
+            .boton-busqueda:hover {
+                transform: scale(1.05); /* lo agranda un poco al enfocar */
+                box-shadow: 0 4px 12px #5f61f380; 
+                opacity: 0.95; /* ligera transparencia */
+            }
+
+
+
+            /* Sección perfil */
+            .seccion-perfil {
+                display: flex; /* Para alinear imagen y enlaces horizontalmente */
+                align-items: center; /* Centrar verticalmente */
+                
+            }
+
+            .contenedor-imagen-perfil {
+                width: 50px; 
+                height: 50px; 
+                background: linear-gradient(45deg, #aab9ff, #c0bfff);
+                border-radius: 50%;
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                margin-right: 15px; 
+            }
+
+            .fotoperfilprueba {
+                width: 100%; /* Ocupa todo el contenedor */
+                height: 100%; /* Ocupa todo el contenedor */
+                border-radius: 50%; /* Imagen redondeada */
+                object-fit: cover; /* Ajusta la imagen para cubrir el área */
+            }
+
+            .icono-perfil {
+                width: 24px; 
+                height: 24px; 
+                color: white; /* Color del ícono */
+            }
+
+            .enlaces-perfil {
+                display: flex; /* Contenedor flexible */
+                flex-direction: column; /* Apila enlaces verticalmente */
+            }
+
+            .enlaces-perfil a {
+                color: #000; 
+                text-decoration: none; /* Sin subrayado */
+                margin-bottom: 5px; 
+                position: relative; 
+                padding: 4px 0; 
+            }
+
+
+
+            /* Enlaces principales de navegación */
+            .enlaces-navegacion {
+               
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center; 
+                background-color: #c0bfff; 
+                padding: 16px 32px;
+                width: 45%; 
+                
+             
+            }
+            .menu-principal-enlaces{
+                gap: 20px;
+                display: flex;
+            }
+
+            .enlaces-navegacion a {
+                color: #000; 
+                text-decoration: none;
+                gap: 10px;
+                display: flex; 
+            }
+
+            .enlaces-navegacion a:hover, .enlaces-perfil a:hover {
+                color: #5f61f3; /* Color morado al pasar mouse */
+                text-shadow: 0 0 5px #5f61f3; /* Sombra del texto */
+                transition: color 0.3s ease; /* Transición suave */
+            }
+
+
+            /* Contenido principal */
+            .contenedor {
+                width: 90%;
+                max-width: 1200px; 
+                margin: 0 auto; /* Centrado horizontal */
+                padding: 0 32px; 
+            }
+
+            /* Sección de bienvenida */
+            .seccion-bienvenida {
+                background-color: #5f61f3; 
+                padding: 64px 0; 
+                text-align: center; 
+            }
+
+        
+
+            .contenido-bienvenida {
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                flex-direction: column; 
+            }
+
+            .contenedor-inicio-sesion {
+                background-color: white;
+                padding: 32px;
+                border-radius: 16px;
+                box-shadow: 0 4px 16px #0000001a; 
+                max-width: 500px; 
+                width: 100%; 
+            }
+
+            .logo-grande {
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+                margin-bottom: 16px; 
+            }
+
+            .imagen-logo {
+                max-width: 100%; 
+                height: auto; /* Mantener proporción */
+            }
+
+            .contenedor-inicio-sesion h1 {
+                font-size: 32px; 
+                margin-top: 8px; 
+                color: #5f61f3; 
+            }
+
+            .contenedor-inicio-sesion p {
+                font-size: 16px; 
+                margin: 16px 0 32px 0; /* Margen arriba 16px, abajo 32px */
+                color: #444; 
+            }
+
+
+            /* Botones */
+            .botones-inicio {
+                display: flex;
+                justify-content: space-between; /* Separar botones */
+                gap: 16px; /* Espacio entre botones */
+            }
+
+            .btn {
+                display: inline-block; /* Comportamiento de botón en línea */
+                padding: 12px 24px;
+                border-radius: 32px; 
+                font-weight: 600;
+                text-decoration: none; 
+                transition: all 0.3s ease; /* Transición suave */
+                text-align: center;
+            }
+
+            .btn-primario {
+                background: #fcce38 ; 
+                color: #000; 
+            }
+
+            .btn-primario:hover {
+                transform: scale(1.05); /* Escala al pasar mouse */
+                opacity: 0.95; /* Ligera transparencia */
+            }
+
+            .btn-secundario {
+                background-color: #e0e0e0;
+                color: #333; 
+            }
+
+            .btn-secundario:hover {
+                background-color: #d5d5d5; 
+                transform: scale(1.05); 
+            }
+
+
+
+
+
+            /* Sección Sobre Eufolkia */
+            .acerca {
+                padding: 64px 0; 
+                background: linear-gradient(135deg, #f5f5f5 0%, #fff 100%); 
+            }
+
+            .acerca-contenido {
+                display: flex;
+                flex-direction: column; 
+                align-items: center; 
+            }
+
+            .acerca-texto {
+                text-align: center; 
+                margin-bottom: 32px; 
+            }
+
+            .acerca-texto h2 {
+                font-size: 40px; 
+                margin-bottom: 16px; 
+                background: linear-gradient(45deg, #5f61f3, #333); 
+                -webkit-background-clip: text; /* Para mostrar el degradado solo en texto */
+                -webkit-text-fill-color: transparent; /* Texto transparente para mostrar fondo */
+                background-clip: text;
+            }
+
+            .acerca-texto p {
+                font-size: 17.6px; 
+                line-height: 1.6;
+                color: #555; 
+                margin-bottom: 16px; 
+            }
+
+            .acerca-carrusel {
+                width: 500px; 
+                height: 250px; 
+                margin: 50px auto 0; 
+                overflow: hidden; 
+                border-radius: 16px;
+            }
+
+            .acerca-carrusel ul {
+                display: flex; 
+                padding: 0; 
+                width: 400%; /* Cuatro veces el ancho para animación */
+                margin: 0; /* Sin margen */
+                animation: slider 16s infinite; /* Animación infinita */
+            }
+
+            .acerca-carrusel li {
+                list-style: none; /* Quita viñetas */
+                width: 100%; /* Ancho completo */
+            }
+
+            .acerca-carrusel img {
+                width: 100%; /* Imagen ocupa todo el ancho */
+                height: auto; /* Mantiene proporción */
+                display: block; /* Quita espacio inferior */
+            }
+
+            @keyframes slider {
+                0% { margin-left: 0%; }
+                20% { margin-left: 0%; }
+
+                25% { margin-left: -100%; }
+                45% { margin-left: -100%; }
+
+                50% { margin-left: -200%; }
+                70% { margin-left: -200%; }
+
+                75% { margin-left: -300%; }
+                95% { margin-left: -300%; }
+
+                100% { margin-left: 0%; }
+            }
+
+
+
+
+
+
+
+         /*Seccion de caracteristicas*/
+
+        .contenedor3 {
+        width: 90%; /* Ocupa el 90% del ancho del contenedor padre */
+        max-width: 1200px;
+        margin: 0 auto; /* Centra horizontalmente el contenedor */
+        display: flex; /* Usa flexbox para distribuir elementos hijos */
+        flex-direction: column; 
+        padding: 32px 16px; /* Espacio interno: 32px arriba y abajo, 16px izquierda y derecha */
+        gap: 32px; /* Espacio de 32px entre los elementos que se encuentran dentro del contenedor padre(hijos) */
+        }
+
+        .caracteristicas {
+        padding: 64px 0; /* 64px de espacio arriba y abajo, 0 a los lados */
+        background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%); /* degradado de blanco a azul claro */
+        text-align: center; /* centra el texto horizontalmente */
+        }
+
+       .caracteristicas h2 {
+        font-size: 40px; 
+        margin-bottom: 0; /* elimina espacio extra para que lo controle gap */
+        background: linear-gradient(45deg, #5f61f3, #333); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text; /*ayuda a marcar hasta donde abarca*/
+        }
+
+        .rejilla-caracteristicas {
+            display: grid; /*lo combierte en rejilla*/
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 32px; 
+            justify-content: center;
+        }
+
+        .tarjeta-caracteristica {
+           display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 16px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 250px;
+            cursor: pointer; 
+        }
+
+        .tarjeta-caracteristica:hover {
+            transform: translateY(-8px); /* eleva ligeramente la tarjeta al pasar el mouse */
+        }
+
+        .tarjeta-caracteristica i {
+        font-size: 48px; /*  ícono grande */ 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text; 
+        margin-bottom: 16px; 
+        }
+
+        .tarjeta-caracteristica h3 {
+            color: #333;
+            margin-bottom: 16px; 
+        }
+
+        /* Footer */
+       /* Pie de página */
+        footer {
+            background: linear-gradient(135deg, #333 0%, #2c2c2c 100%); 
+            color: #fff;
+            padding: 48px 0 16px; 
+        }
+
+        /* Contenedor general del contenido del footer */
+        .footer-contenido {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            margin-bottom: 32px; 
+        }
+
+        /* Logo y texto juntos en el footer */
+        .footer-logo {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 32px; 
+            }
+
+        /* Logo pequeño circular con degradado */
+        .logo-small {
+            height: 40px;
+            width: 40px;
+            background: linear-gradient(45deg, #5f61f3, #fdd835);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 8px; 
+        }   
+
+        /* Enlaces del footer (Inicio, Sobre nosotros, etc.) */
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap; /* Permite que bajen a otra línea si no caben */
+            justify-content: center; /* Centrado horizontal */
+            margin-bottom: 32px; /* Espacio inferior */
+        }
+
+        /* Estilo de los enlaces individuales */
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 8px 16px; /* Espaciado entre enlaces */
+            transition: color 0.3s; /* Suaviza el cambio de color al pasar el mouse */
+        }
+
+        /* Color al pasar el mouse */
+        .footer-links a:hover {
+            color: #fdd835; /* Amarillo al pasar el mouse */
+        }
+
+        /* Enlaces a redes sociales */
+        .social-links a {
+            color: #fff;
+            font-size: 24px; 
+            margin: 0 8px; /* Espaciado lateral entre íconos */
+            transition: all 0.3s; /* Suaviza transformaciones */
+        }
+
+        /* Efecto al pasar el mouse por los íconos */
+        .social-links a:hover {
+            color: #fdd835; /* Amarillo */
+            transform: translateY(-2px); /* Se mueve ligeramente hacia arriba */
+        }
+
+        /* Texto de derechos de autor */
+        .copyright {
+            text-align: center;
+            font-size: 14px;
+            color: #aaa; /* Gris claro */
+            border-top: 1px solid #444; /* Línea divisoria arriba */
+            padding-top: 16px; /* Separación del contenido superior */
+        }
+
+
+        /*adaptacion de contendio para el tamaño de la pantalla */
+    @media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 16px;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #5f61f3;
+    }
+
+    
+    .acerca-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    .acerca-texto {
+        text-align: left;
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    
+    .acerca-carrusel {
+        width: 45%;
+    }
+
+    
+    .rejilla-caracteristicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .footer-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-logo {
+        margin-bottom: 0;
+    }
+
+    .footer-links {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .rejilla-caracteristicas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

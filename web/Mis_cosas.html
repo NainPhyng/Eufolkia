@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Cosas - Eufolkia</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+     <link rel="stylesheet" href="styles/Mis cosas.css">
+    
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+   <header class="encabezado">
+            <!-- Encabezado del inicio, navegación -->
+        <nav class="navegacion-principal">
+                <div class="contenedor-navegacion">
+                        <div class="contenedor">
+                        <a href="inicio.html" class="boton-regresar" id="enlace-regresar">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        </div>
+                        <div class="logo-contenedor">
+                            <img src="img/Logo_eulfolkia.png" alt="Eufolkia Logo" class="logo">
+                           <span class="texto-logo">EUFOLKIA</span>
+                            <span class="texto-perfil">Mis cosas</span>
+                        </div>
+                        
+                    </div>
+
+        </nav>
+    </header>
+
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+        <ul>
+            
+            <li><a href="Mis_cosas.html" class="active"><i class="fas fa-plus"></i> Añadir</a></li>
+            <li><a href="buscar.html"><i class="fas fa-search"></i> Buscar</a></li>
+            <!--<li><a href="consultar.html"><i class="fas fa-question-circle"></i> Consultar</a></li>-->
+            <li><a href="eliminar.html"><i class="fas fa-trash"></i> Eliminar</a></li>
+            <li><a href="editar.html"><i class="fas fa-edit"></i> Editar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="files-section">
+            <h2 class="section-title">Tus archivos</h2>
+            <table class="files-table">
+                <tr>
+                    <td class="file-option">
+                        <div class="file-button">
+                            <span>Añadir archivo</span>
+                            <i class="fas fa-file"></i>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="file-option">
+                        <div class="file-button">
+                            <span>Añadir audio</span>
+                            <i class="fas fa-music"></i>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="file-option">
+                        <div class="file-button">
+                            <span>Añadir video</span>
+                            <i class="fas fa-video"></i>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
